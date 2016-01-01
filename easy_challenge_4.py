@@ -6,18 +6,18 @@
 import random
 import string
 
-alpha = string.ascii_letters + string.ascii_digits
+alpha = string.ascii_letters + string.digits # + string.punctuation
 
 pass_len = int(raw_input("enter password length: > "))
 pass_amount = int(raw_input("enter total passwords: > "))
-
-print("\n\n")
-print(alpha)
-print(random.sample(alpha, pass_len))
-print("\n\n")
-print(alpha*pass_len)
-print(random.sample(alpha*pass_len, pass_len))
-print("\n\n")
-# print(str(alpha*pass_len)+"\n\n")
 for i in range(pass_amount):
-  print(''.join(random.sample(alpha*pass_len, pass_len)))
+  print(str(i+1)+'. '+''.join(random.sample(alpha*pass_len, pass_len)))
+
+# print("\n\n")
+# print(alpha)
+# print(random.sample(alpha, pass_len))
+# print("\n\n")
+# print(alpha*pass_len)
+# print(random.sample(alpha*pass_len, pass_len))
+# print("\n\n")
+# print(str(alpha*pass_len)+"\n\n")
