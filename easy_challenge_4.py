@@ -6,20 +6,17 @@
 import random
 import string
 
-alpha = list(string.ascii_lowercase)
-alpha_test = ["a","b","c","d","e"]
-
+alpha = string.ascii_letters + string.ascii_digits
 
 pass_len = int(raw_input("enter password length: > "))
 pass_amount = int(raw_input("enter total passwords: > "))
+
 print("\n\n")
-# print(alpha)
-# print(random.sample(alpha, pass_len))
-print(random.sample(alpha_test, pass_len))
+print(alpha)
+print(random.sample(alpha, pass_len))
 print("\n\n")
-# print(alpha*pass_len)
-# print(random.sample(alpha*pass_len, pass_len))
-print(random.sample(alpha_test*pass_len, pass_len))
+print(alpha*pass_len)
+print(random.sample(alpha*pass_len, pass_len))
 print("\n\n")
 # print(str(alpha*pass_len)+"\n\n")
 for i in range(pass_amount):
